@@ -11,5 +11,5 @@ public interface IWeatherObserver {
 	 * @param humidity
 	 * @param atmospheriquePressure
 	 */
-	void update(final float temperature, final float humidity, final float atmospheriquePressure);
+	void update(final IObservable object);
 }

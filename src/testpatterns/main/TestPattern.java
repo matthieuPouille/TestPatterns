@@ -3,7 +3,7 @@
  */
 package testpatterns.main;
 
-import testpatterns.controller.IController;
+import testpatterns.decorator_pattern.controller.DecoratorPatternController;
 import testpatterns.observer_pattern.controller.ObserverPatternController;
 
 /**
@@ -19,8 +19,27 @@ public class TestPattern {
 	 * @param args
 	 */
 	public static void main(final String[] args) {
-		final IController controller = new ObserverPatternController();
+		if (args.length < 1) {
+			printCommandInformations();
+		} else {
+			switch (args[0].toUpperCase()) {
+				case "OBSERVER" :
+					new ObserverPatternController().executeAction();
+					break;
+				case "DECORATOR" :
+					new DecoratorPatternController().executeAction();
+					break;
+				default :
+					printCommandInformations();
+					break;
+			}
+		}
+	}
 
-		controller.executeAction();
+	private static void printCommandInformations() {
+		System.out.println("To use this programm, you must specify a design pattern name.");
+		System.out.println("");
+		System.out.println("Available design patterns : ");
+		System.out.println("OBSERVER, DECORATOR");
 	}
 }

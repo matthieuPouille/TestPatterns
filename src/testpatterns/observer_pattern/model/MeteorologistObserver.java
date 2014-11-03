@@ -13,7 +13,7 @@ public class MeteorologistObserver implements IWeatherObserver {
 	 * @see testpatterns.observer_pattern.model.IWeatherObserver#update(float, float, float)
 	 */
 	@Override
-	public void update(final float temperature, final float humidity, final float atmospheriquePressure) {
+	public void update(final IObservable object) {
 		System.out.println("The meteorologist got the weather update !");
 	}
 }

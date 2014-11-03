@@ -53,7 +53,7 @@ public class Weather implements IObservable {
 	public void notifyObservers() {
 		for (final IWeatherObserver o : this.observers) {
 			// We send this weather object so that observers can get its new values
-			o.update(this.getTemperature(), this.getHumidity(), this.getAtmospheriquePressure());
+			o.update(this);
 		}
 	}
 
