@@ -44,6 +44,6 @@ public class TestPattern {
 		System.out.println("To use this programm, you must specify a design pattern name.");
 		System.out.println("");
 		System.out.println("Available design patterns : ");
-		System.out.println("OBSERVER, DECORATOR");
+		System.out.println("OBSERVER, DECORATOR, FACTORY");
 	}
 }
