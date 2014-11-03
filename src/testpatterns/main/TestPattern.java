@@ -4,6 +4,7 @@
 package testpatterns.main;
 
 import testpatterns.decorator_pattern.controller.DecoratorPatternController;
+import testpatterns.factory_pattern.controller.FactoryPatternController;
 import testpatterns.observer_pattern.controller.ObserverPatternController;
 
 /**
@@ -28,6 +29,9 @@ public class TestPattern {
 					break;
 				case "DECORATOR" :
 					new DecoratorPatternController().executeAction();
+					break;
+				case "FACTORY" :
+					new FactoryPatternController().executeAction();
 					break;
 				default :
 					printCommandInformations();
